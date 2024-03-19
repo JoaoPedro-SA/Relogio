@@ -36,6 +36,26 @@ background-position: center;
      70% {  background-color: rgb(218, 255, 8);} 
    }
 
+
+
+     
+     
+@media screen and (max-width: 1400px){
+     .corpo{
+          display: flex;
+          margin: 200px 300px ;
+          margin-left: 500;
+          font-size: 60px;
+          position: absolute;
+          right: -200px;
+          left: 300px;
+          background-size: cover;
+          background-repeat:repeat;
+
+     }
+
+}
+
 @media screen and (max-width: 767px) {
 .corpo{
      margin:0;
@@ -45,6 +65,7 @@ background-position: center;
      font-size: 50px;
      border-radius: 10px;
      animation: colorChangereverse 10s linear infinite reverse ;
+     font-size: 40px;
 
 }
 
@@ -73,19 +94,18 @@ body{
      50% { background-color: rgb(0, 255, 0);} /* Verde */
      100% { background-color: rgb(0, 0, 255);} /* Azul */
      70% {  background-color: rgb(218, 255, 8);} 
+     
    }
 
 }
 
 
 
+
+
  /*  @media screen and (min-height: 767px) and (
      min-height: 450px) {
-     .corpo{
-          margin: 0px;
-          padding: 100px;
-          border: 2px solid rgb(255, 0, 0);
-          font-size: 50px;
+     
      }
      
      
