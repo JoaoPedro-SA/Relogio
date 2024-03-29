@@ -24,4 +24,12 @@ function updateDate() {
    requestAnimationFrame(updateDate);
 
 
-   
+   const objeto = document.querySelector('.corpo');
+
+objeto.addEventListener('click', () => {
+  objeto.classList.add('animando');
+
+  setTimeout(() => {
+    objeto.classList.remove('animando');
+  }, 2000);
+});

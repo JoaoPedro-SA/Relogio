@@ -3,7 +3,7 @@ background-color: rgb(0, 0, 0);
 text-align: center;
 align-items: center;
 align-content: center;
-background-image: url("pexels-lisa-fotios-834657.jpg");
+/*background-image: url("pexels-lisa-fotios-834657.jpg");*/
 background-size: cover;
 background-position: center;
 /*background-repeat: no-repeat;*/
@@ -13,9 +13,9 @@ background-position: center;
 .corpo{
      background-color: rgb(255, 255, 255);
      padding: 50px;
-     margin: 500px 100px 10px 900px;
+     margin: 300px 500px 10px 500px;
      border: 20px solid rgb(0, 0, 0);
-     border-radius: 90px;
+     border-radius: 1000px;
      font-size: 50px;
      color: rgb(0, 0, 0);
      font-family: "Kode Mono", monospace;
@@ -23,7 +23,8 @@ background-position: center;
      font-size: 100px;
      padding-top: 0;
      padding-bottom: 0;
-     animation: colorChange 5s linear infinite;
+     animation: colorChangeB 20s linear infinite ;
+     
 
      
 }
@@ -35,8 +36,40 @@ background-position: center;
      100% { background-color: rgb(0, 0, 255);} /* Azul */
      70% {  background-color: rgb(218, 255, 8);} 
    }
+   
+@keyframes colorChangeB {
+     
+     0% { border: 100px solid rgb(255, 0, 0); } /* Vermelho */
+     30%{  border: 50px solid rgb(162, 0, 255);}
+     50% {  border: 20px solid rgb(0, 255, 0);} /* Verde */
+     70% {  border: 1px solid rgb(0, 0, 255);} /* Azul */
+     100% {   border: 100px solid rgb(218, 255, 8);} 
+     70% {  border: 1px solid rgb(255, 153, 0);} /* Azul */
+     50% {  border: 20px solid rgb(0, 0, 0);} /* Verde */
+     30%{  border: 50px solid rgb(162, 0, 255);}
+     
+      0% {
+    transform: translateX(0);
+  }
+  20% {
+     transform: translatey(-100%);
+   }
+  40% {
+     transform: translateX(-60%);
+   }
+   60% {
+     transform: translatey(117%);
+   }
+  80% {
+    transform: translateX(57%);
+    /* Opcional: adicione propriedades de opacidade para efeito de "desaparecimento" */
+    opacity: 100;
+   }
+   100% {
+     transform: translateX(0);
+   }
 
-
+}
 
      
      
@@ -47,21 +80,75 @@ background-position: center;
           margin-left: 500;
           font-size: 60px;
           position: absolute;
-          right: -200px;
-          left: 300px;
+          right: 0px;
+          left: 0px;
           background-size: cover;
           background-repeat:repeat;
 
      }
 
+
+
+
+
+
+     @keyframes colorChangeB {
+     
+      0% { border: 100px solid rgb(255, 0, 0); } /* Vermelho */
+      30%{  border: 50px solid rgb(162, 0, 255);}
+      50% {  border: 20px solid rgb(0, 255, 0);} /* Verde */
+      70% {  border: 1px solid rgb(0, 0, 255);} /* Azul */
+      100% {   border: 100px solid rgb(218, 255, 8);} 
+      70% {  border: 1px solid rgb(255, 153, 0);} /* Azul */
+      50% {  border: 20px solid rgb(0, 0, 0);} /* Verde */
+      30%{  border: 50px solid rgb(162, 0, 255);}
+      
+       0% {
+     transform: translateX(0);
+   }
+   20% {
+      transform: translatey(-100%);
+    }
+   40% {
+      transform: translateX(-50%);
+    }
+    60% {
+      transform: translatey(117%);
+    }
+   80% {
+     transform: translateX(40%);
+     /* Opcional: adicione propriedades de opacidade para efeito de "desaparecimento" */
+     opacity: 100;
+    }
+    100% {
+      transform: translateX(0);
+    }
+ 
+ }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 }
+
 
 @media screen and (max-width: 767px) {
 .corpo{
      margin:0;
-     margin-top: 300px;
+     margin-top: 0px;
      padding:0;
-     border: 2px solid rgb(0, 0, 0);
+     border: 3px solid rgb(0, 0, 0);
      font-size: 50px;
      border-radius: 10px;
      animation: colorChangereverse 10s linear infinite reverse ;
@@ -74,16 +161,16 @@ body{
      background-image: none;
      justify-content: center;
      justify-items: center;
-     animation: colorChange 1s linear infinite;
+     animation: colorChange 20s linear infinite;
  }
 
  @keyframes colorChange {
-     10% { background-color: rgb(255, 255, 255); } /* Vermelho */
-     10% { background-color: rgb(255, 0, 0); } /* Vermelho */
-     30%{ background-color: rgb(162, 0, 255);}
-     50% { background-color: rgb(0, 255, 0);} /* Verde */
-     90% { background-color: rgb(0, 0, 255);} /* Azul */
-     70% {  background-color: rgb(218, 255, 8);} 
+     10% { background-color: rgb(71, 71, 71); } /* Vermelho */
+     10% { background-color: rgb(53, 52, 52); } /* Vermelho */
+     30%{ background-color: rgb(22, 22, 22);}
+     50% { background-color: rgb(31, 32, 31);} /* Verde */
+     90% { background-color: rgb(83, 83, 85);} /* Azul */
+     70% {  background-color: rgb(25, 27, 13);} 
      100% {  background-color: rgb(0, 0, 0);} 
    }
 
@@ -94,8 +181,34 @@ body{
      50% { background-color: rgb(0, 255, 0);} /* Verde */
      100% { background-color: rgb(0, 0, 255);} /* Azul */
      70% {  background-color: rgb(218, 255, 8);} 
+
+
+           
+     0% {
+      transform: translatey(0);
+    }
+    20% {
+       transform: translatey(650%);
+     }
+
+   
      
    }
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
 
 }
 
@@ -112,3 +225,24 @@ body{
         }
 
         */
+          @keyframes bater {
+          0% {
+            transform: translateX(0);
+          }
+          25% {
+            transform: translateX(100%);
+          }
+          50% {
+            transform: translateX(100%);
+          }
+          75% {
+            transform: translateX(0);
+          }
+          100% {
+          transform: translateX(100%);
+          }
+        }
+        
+        .objeto.animando {
+          animation: bater 2s linear infinite;
+        }
