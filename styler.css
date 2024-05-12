@@ -7,27 +7,37 @@ align-content: center;
 background-size: cover;
 background-position: center;
 /*background-repeat: no-repeat;*/
+overflow: hidden;
+
 
 }
 
 .corpo{
-     background-color: rgb(255, 255, 255);
-     padding: 50px;
-     margin: 300px 500px 10px 500px;
-     border: 20px solid rgb(0, 0, 0);
-     border-radius: 1000px;
+     background-color: rgba(0, 0, 0, 0);
+     padding: 0px;
+     margin: 0px 0px 0px 0px;
+     border: 0px solid rgb(0, 0, 0);
+     border-radius: 0px;
      font-size: 50px;
-     color: rgb(0, 0, 0);
+     color: rgb(255, 255, 255);
      font-family: "Kode Mono", monospace;
      font-optical-sizing: auto;
-     font-size: 100px;
+     font-size: 80px;
      padding-top: 0;
      padding-bottom: 0;
-     animation: colorChangeB 20s linear infinite ;
-     
+     height: 100vh;
+     width: 100vw;
+    
 
      
 }
+.data{
+  text-wrap: nowrap;
+  padding-top: 20%;
+  text-shadow: 0px 60px 10px white;
+  animation: colorChangeB 0s infinite ;
+}
+
 
 @keyframes colorChange {
      0% { background-color: rgb(255, 0, 0); } /* Vermelho */
@@ -39,14 +49,18 @@ background-position: center;
    
 @keyframes colorChangeB {
      
-     0% { border: 100px solid rgb(255, 0, 0); } /* Vermelho */
-     30%{  border: 50px solid rgb(162, 0, 255);}
-     50% {  border: 20px solid rgb(0, 255, 0);} /* Verde */
-     70% {  border: 1px solid rgb(0, 0, 255);} /* Azul */
-     100% {   border: 100px solid rgb(218, 255, 8);} 
-     70% {  border: 1px solid rgb(255, 153, 0);} /* Azul */
-     50% {  border: 20px solid rgb(0, 0, 0);} /* Verde */
-     30%{  border: 50px solid rgb(162, 0, 255);}
+   10% {text-shadow: 0px 60px 10px rgb(255, 8, 0)}
+   20% {color: rgb(255, 0, 0)}
+   30%{text-shadow: 0px 60px 10px rgb(0, 255, 55)}
+   40% {color: rgb(0, 255, 85)}
+   50% {text-shadow: 0px 60px 10px rgb(0, 26, 255)}
+   60% {color: rgb(0, 38, 255)}
+  70%{text-shadow: 0px 60px 10px rgb(238, 255, 0)}
+  80% {color: rgb(255, 251, 0)}
+  90% {text-shadow: 0px 60px 10px rgb(255, 153, 0)}
+  1000% {color: rgb(255, 94, 0)}
+    
+  /*
      
       0% {
     transform: translateX(0);
@@ -61,18 +75,21 @@ background-position: center;
      transform: translatey(117%);
    }
   80% {
-    transform: translateX(57%);
-    /* Opcional: adicione propriedades de opacidade para efeito de "desaparecimento" */
-    opacity: 100;
-   }
-   100% {
-     transform: translateX(0);
-   }
+    transform: translateX(0%);/*
+    Opcional: adicione propriedades de opacidade para efeito de "desaparecimento"  
+*/
+
+
+
 
 }
 
+
+
+
+
      
-     
+
 @media screen and (max-width: 1400px){
      .corpo{
           display: flex;
@@ -84,11 +101,15 @@ background-position: center;
           left: 0px;
           background-size: cover;
           background-repeat:repeat;
-
+          height: 0vh;
+          width: 0vw;
+          
      }
+.data{
+  text-shadow: 0px 50px 10px white;
+}
 
-
-
+    
 
 
 
@@ -103,7 +124,7 @@ background-position: center;
       50% {  border: 20px solid rgb(0, 0, 0);} /* Verde */
       30%{  border: 50px solid rgb(162, 0, 255);}
       
-       0% {
+  /*     0% {
      transform: translateX(0);
    }
    20% {
@@ -117,13 +138,13 @@ background-position: center;
     }
    80% {
      transform: translateX(40%);
-     /* Opcional: adicione propriedades de opacidade para efeito de "desaparecimento" */
+     /* Opcional: adicione propriedades de opacidade para efeito de "desaparecimento" 
      opacity: 100;
     }
     100% {
       transform: translateX(0);
     }
- 
+    */
  }
 
 
@@ -140,7 +161,7 @@ background-position: center;
 
 
 
-}
+
 
 
 @media screen and (max-width: 767px) {
@@ -148,12 +169,16 @@ background-position: center;
      margin:0;
      margin-top: 0px;
      padding:0;
-     border: 3px solid rgb(0, 0, 0);
-     font-size: 50px;
+     border: 3px solid rgba(255, 255, 255, 0);
+     font-size: 30px;
      border-radius: 10px;
-     animation: colorChangereverse 10s linear infinite reverse ;
+     animation: colorChangereverse 0s linear infinite reverse ;
      font-size: 40px;
-
+     text-wrap: wrap;
+     width: 100%;
+     height: 100%;
+    
+    
 }
 
 body{
@@ -161,7 +186,17 @@ body{
      background-image: none;
      justify-content: center;
      justify-items: center;
-     animation: colorChange 20s linear infinite;
+     animation: colorChange 0s linear infinite;
+     overflow: scroll;
+ }
+
+ .data{
+  text-wrap: wrap;
+  text-shadow: 0px 100px 10px white;
+  background-color: rgba(165, 42, 42, 0);
+  margin-top: 200px;
+  padding: 5px;
+  
  }
 
  @keyframes colorChange {
@@ -187,7 +222,7 @@ body{
      0% {
       transform: translatey(0);
     }
-    20% {
+    0% {
        transform: translatey(650%);
      }
 
@@ -224,7 +259,7 @@ body{
      
         }
 
-        */
+        
           @keyframes bater {
           0% {
             transform: translateX(0);
@@ -246,3 +281,7 @@ body{
         .objeto.animando {
           animation: bater 2s linear infinite;
         }
+      }
+*/
+
+    }
