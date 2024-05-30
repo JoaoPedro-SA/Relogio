@@ -31,5 +31,16 @@ objeto.addEventListener('click', () => {
 
   setTimeout(() => {
     objeto.classList.remove('animando');
-  }, 2000);
-});
+  }, 2000);   
+});     
+
+
+
+
+
+
+
+
+
+
+
