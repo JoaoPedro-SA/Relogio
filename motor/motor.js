@@ -33,7 +33,18 @@ objeto.addEventListener('click', () => {
     objeto.classList.remove('animando');
   }, 2000);   
 });     
-
+const button = document.querySelector('.button');
+const bord = document.querySelector('.body');
+const cor = document.querySelector('.cor');
+const corL = document.querySelector('.corL');
+let data_cor = document.getElementById('data_cor');
+console.log(cor.value);
+button.addEventListener('click', () => {
+  console.log(cor.value);
+  bord.style.backgroundColor = cor.value;
+  data_cor.style.color = corL.value;
+  data_cor.style.textShadow = `0px 60px 10px ${corL.value}`;
+})
 
 
 
