@@ -15,19 +15,33 @@
           <div>
                <div class="arrumar">  <input class="cor" type="color"> <p lass="letra" >  mudar a cor de fundo </P> <br> <br> </div>
                <div class="arrumar">  <input class="corL" type="color"> <p class="letra"> mudar a cor da letra </P> <br> <br> </div>
-               <button class="button">alterar</button>
+               <div><button class="button">alterar</button> 
+                    <button type="button" class="button2"> Modo Relogio</button> 
+                    <button class="button3"> Modo cronometro </button>  </div>
+               <div>   
+                    <p>
+                    <button style="display: none;" id="iniciar">iniciar</button>
+                    <button style="display: none;" id="pausar">pausar</button>
+                    <button style="display: none;" id="zerar">zerar</button>
+                  </p>
+               </div> 
           </div>
      </nav>
 
      <section class="corpo">
 
           <div class="data" id="data_cor" ></div>
+          <div style="display: none;" id="relogio">00:00:00</div>
+          
+
 
      </section>
-
      
+
+          
      
      <script src="motor/motor.js"></script>
+     <script src="motor/event.js"></script>
 
 </body>
 </html>
