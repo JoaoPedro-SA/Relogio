@@ -33,11 +33,19 @@ objeto.addEventListener('click', () => {
     objeto.classList.remove('animando');
   }, 2000);
 });
+
+let h = 0;
+let m = 0;
+let s = 0;
+
+
 const button = document.querySelector('.button');
 const bord = document.querySelector('.body');
 const cor = document.querySelector('.cor');
 const corL = document.querySelector('.corL');
 let data_cor = document.getElementById('data_cor');
+
+
 console.log(cor.value);
 button.addEventListener('click', () => {
   console.log(cor.value);
@@ -47,19 +55,21 @@ button.addEventListener('click', () => {
   data_cor.style.textShadow = `0px 60px 10px ${corL.value}`;
 })
 
-const iniciar = document.getElementById("iniciar");
-const pausar = document.getElementById("pausar");
-const resetar = document.getElementById("zerar");
 
+
+
+
+const modo_cronometro = document.querySelector('.buttons_cronometro');
+
+const modo_temporizador = document.querySelector('.buttons_temporizador');
 
 function modelo_relogio() {
 
   const button2 = document.querySelector('.button2');
 
   button2.addEventListener('click', () => {
-    iniciar.style.display = 'none';
-    pausar.style.display = 'none';
-    resetar.style.display = 'none';
+    modo_temporizador.style.display = 'none';
+    modo_cronometro.style.display = 'none';
     result.style.display = '';
     relogio.style.display = 'none';
   })
@@ -68,17 +78,22 @@ function modelo_relogio() {
 
 modelo_relogio();
 
+
+
 const relogio = document.querySelector('#relogio');
 
 function modelo_cronometro() {
   const button3 = document.querySelector('.button3');
 
   button3.addEventListener('click', () => {
-    iniciar.style.display = '';
-    pausar.style.display = '';
-    resetar.style.display = '';
+    modo_temporizador.style.display = 'none';
+    modo_cronometro.style.display = '';
     result.style.display = 'none';
     relogio.style.display = '';
+    h = 0;
+    m = 0;
+    s = 0;
+    relogio.textContent = `${String(h).padStart(2, '0')}:${String(m).padStart(2, '0')}:${String(s).padStart(2, '0')}`;
 
   })
 
@@ -86,3 +101,24 @@ function modelo_cronometro() {
 
 modelo_cronometro();
 
+
+
+function modelo_temporizador() {
+  const button4 = document.querySelector('.button4');
+  button4.addEventListener('click', async () => {
+    modo_temporizador.style.display = '';
+    modo_cronometro.style.display = 'none';
+    result.style.display = 'none';
+    relogio.style.display = '';
+    h = 1;
+    m = 1;
+    s = 1;
+    relogio.textContent = `${String(h).padStart(2, '0')}:${String(m).padStart(2, '0')}:${String(s).padStart(2, '0')}`;
+
+
+  })
+
+
+}
+
+modelo_temporizador();

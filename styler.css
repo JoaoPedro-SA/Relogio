@@ -1,21 +1,36 @@
-body{
-background-color: rgb(0, 0, 0);
-text-align: center;
-align-items: center;
-align-content: center;
-/*background-image: url("pexels-lisa-fotios-834657.jpg");*/
-background-size: cover;
-background-position: center;
-/*background-repeat: no-repeat;*/
-overflow: hidden;
-margin: 0%;
-padding: 0%;
+body {
+  background-color: rgb(0, 0, 0);
+  text-align: center;
+  align-items: center;
+  align-content: center;
+  /*background-image: url("pexels-lisa-fotios-834657.jpg");*/
+  background-size: cover;
+  background-position: center;
+  /*background-repeat: no-repeat;*/
+  overflow: hidden;
+  margin: 0%;
+  padding: 0%;
 
 
 }
 
+.modal-header {
+  background-color: rgb(48, 48, 47);
+  color: white;
+}
 
-.nav{
+.modal-body {
+  background-color: rgb(48, 48, 47);
+  color: white;
+}
+
+.modal-content.modal-content {
+  background-color: rgb(48, 48, 47);
+  color: white;
+}
+
+
+.nav {
   width: 100%;
   color: white;
   height: 100px;
@@ -24,69 +39,116 @@ padding: 0%;
   position: fixed;
   top: -16px;
   padding-top: 50px;
-
+  justify-content: center;
 }
 
-.arrumar{
+.arrumar {
   display: flex;
-  gap:15px;
+  gap: 15px;
   justify-content: center;
 }
 
 
-.corpo{
-     background-color: rgba(0, 0, 0, 0);
-     padding: 0px;
-     margin: 0px 0px 0px 0px;
-     border: 0px solid rgb(0, 0, 0);
-     border-radius: 0px;
-     font-size: 50px;
-     color: rgb(255, 255, 255);
-     font-family: "Kode Mono", monospace;
-     font-optical-sizing: auto;
-     font-size: 80px;
-     padding-top: 0;
-     padding-bottom: 0;
-     height: 100vh;
-     width: 100vw;
-    
+.corpo {
+  background-color: rgba(0, 0, 0, 0);
+  padding: 0px;
+  margin: 0px 0px 0px 0px;
+  border: 0px solid rgb(0, 0, 0);
+  border-radius: 0px;
+  font-size: 50px;
+  color: rgb(255, 255, 255);
+  font-family: "Kode Mono", monospace;
+  font-optical-sizing: auto;
+  font-size: 80px;
+  padding-top: 0;
+  padding-bottom: 0;
+  height: 100vh;
+  width: 100vw;
 
-     
+
+
 }
-.letra{ 
+
+.letra {
   color: white;
 }
 
 
-.data{
+.data {
   text-wrap: nowrap;
   padding-top: 20%;
   text-shadow: 0px 60px 10px white;
-  animation: colorChangeB 0s infinite ;
+  animation: colorChangeB 0s infinite;
 }
 
 
 @keyframes colorChange {
-     0% { background-color: rgb(255, 0, 0); } /* Vermelho */
-     30%{ background-color: rgb(162, 0, 255);}
-     50% { background-color: rgb(0, 255, 0);} /* Verde */
-     100% { background-color: rgb(0, 0, 255);} /* Azul */
-     70% {  background-color: rgb(218, 255, 8);} 
-   }
-   
+  0% {
+    background-color: rgb(255, 0, 0);
+  }
+
+  /* Vermelho */
+  30% {
+    background-color: rgb(162, 0, 255);
+  }
+
+  50% {
+    background-color: rgb(0, 255, 0);
+  }
+
+  /* Verde */
+  100% {
+    background-color: rgb(0, 0, 255);
+  }
+
+  /* Azul */
+  70% {
+    background-color: rgb(218, 255, 8);
+  }
+}
+
 @keyframes colorChangeB {
-     
-   10% {text-shadow: 0px 60px 10px rgb(255, 8, 0)}
-   20% {color: rgb(255, 0, 0)}
-   30%{text-shadow: 0px 60px 10px rgb(0, 255, 55)}
-   40% {color: rgb(0, 255, 85)}
-   50% {text-shadow: 0px 60px 10px rgb(0, 26, 255)}
-   60% {color: rgb(0, 38, 255)}
-  70%{text-shadow: 0px 60px 10px rgb(238, 255, 0)}
-  80% {color: rgb(255, 251, 0)}
-  90% {text-shadow: 0px 60px 10px rgb(255, 153, 0)}
-  1000% {color: rgb(255, 94, 0)}
-    
+
+  10% {
+    text-shadow: 0px 60px 10px rgb(255, 8, 0)
+  }
+
+  20% {
+    color: rgb(255, 0, 0)
+  }
+
+  30% {
+    text-shadow: 0px 60px 10px rgb(0, 255, 55)
+  }
+
+  40% {
+    color: rgb(0, 255, 85)
+  }
+
+  50% {
+    text-shadow: 0px 60px 10px rgb(0, 26, 255)
+  }
+
+  60% {
+    color: rgb(0, 38, 255)
+  }
+
+  70% {
+    text-shadow: 0px 60px 10px rgb(238, 255, 0)
+  }
+
+  80% {
+    color: rgb(255, 251, 0)
+  }
+
+  90% {
+    text-shadow: 0px 60px 10px rgb(255, 153, 0)
+  }
+
+  1000% {
+    color: rgb(255, 94, 0)
+  }
+
   /*
      
       0% {
@@ -111,52 +173,88 @@ padding: 0%;
 
 }
 
-#relogio{
+#relogio {
   position: relative;
   left: 240px;
   top: 30px;
-  
+
+}
+
+#temporizador {
+  position: relative;
+  left: 240px;
+  top: 30px;
+  color: red;
 }
 
 
 
-     
-
-@media screen and (max-width: 1400px){
-     .corpo{
-          display: flex;
-          margin: 200px 300px ;
-          margin-left: 500;
-          font-size: 60px;
-          position: absolute;
-          right: 0px;
-          left: 0px;
-          background-size: cover;
-          background-repeat:repeat;
-          height: 0vh;
-          width: 0vw;
-          
-     }
-.data{
-  text-shadow: 0px 50px 10px white;
-}
-
-    
 
 
+@media screen and (max-width: 1400px) {
+  .corpo {
+    display: flex;
+    margin: 200px 300px;
+    margin-left: 500;
+    font-size: 60px;
+    position: absolute;
+    right: 0px;
+    left: 0px;
+    background-size: cover;
+    background-repeat: repeat;
+    height: 0vh;
+    width: 0vw;
 
-     @keyframes colorChangeB {
-     
-      0% { border: 100px solid rgb(255, 0, 0); } /* Vermelho */
-      30%{  border: 50px solid rgb(162, 0, 255);}
-      50% {  border: 20px solid rgb(0, 255, 0);} /* Verde */
-      70% {  border: 1px solid rgb(0, 0, 255);} /* Azul */
-      100% {   border: 100px solid rgb(218, 255, 8);} 
-      70% {  border: 1px solid rgb(255, 153, 0);} /* Azul */
-      50% {  border: 20px solid rgb(0, 0, 0);} /* Verde */
-      30%{  border: 50px solid rgb(162, 0, 255);}
-      
-  /*     0% {
+  }
+
+  .data {
+    text-shadow: 0px 50px 10px white;
+  }
+
+
+
+
+
+  @keyframes colorChangeB {
+
+    0% {
+      border: 100px solid rgb(255, 0, 0);
+    }
+
+    /* Vermelho */
+    30% {
+      border: 50px solid rgb(162, 0, 255);
+    }
+
+    50% {
+      border: 20px solid rgb(0, 255, 0);
+    }
+
+    /* Verde */
+    70% {
+      border: 1px solid rgb(0, 0, 255);
+    }
+
+    /* Azul */
+    100% {
+      border: 100px solid rgb(218, 255, 8);
+    }
+
+    70% {
+      border: 1px solid rgb(255, 153, 0);
+    }
+
+    /* Azul */
+    50% {
+      border: 20px solid rgb(0, 0, 0);
+    }
+
+    /* Verde */
+    30% {
+      border: 50px solid rgb(162, 0, 255);
+    }
+
+    /*     0% {
      transform: translateX(0);
    }
    20% {
@@ -177,7 +275,7 @@ padding: 0%;
       transform: translateX(0);
     }
     */
- }
+  }
 
 
 
@@ -196,75 +294,113 @@ padding: 0%;
 
 
 
-@media screen and (max-width: 767px) {
-.corpo{
-     margin:0;
-     margin-top: 0px;
-     padding:0;
-     border: 3px solid rgba(255, 255, 255, 0);
-     font-size: 30px;
-     border-radius: 10px;
-     animation: colorChangereverse 0s linear infinite reverse ;
-     font-size: 40px;
-     text-wrap: wrap;
-     width: 100%;
-     height: 100%;
-    
-    
-}
-
-body{
-     backface-visibility: visible;
-     background-image: none;
-     justify-content: center;
-     justify-items: center;
-     animation: colorChange 0s linear infinite;
-     overflow: scroll;
- }
-
- .data{
-  text-wrap: wrap;
-  text-shadow: 0px 100px 10px white;
-  background-color: rgba(165, 42, 42, 0);
-  margin-top: 200px;
-  padding: 5px;
-  
- }
-
- @keyframes colorChange {
-     10% { background-color: rgb(71, 71, 71); } /* Vermelho */
-     10% { background-color: rgb(53, 52, 52); } /* Vermelho */
-     30%{ background-color: rgb(22, 22, 22);}
-     50% { background-color: rgb(31, 32, 31);} /* Verde */
-     90% { background-color: rgb(83, 83, 85);} /* Azul */
-     70% {  background-color: rgb(25, 27, 13);} 
-     100% {  background-color: rgb(0, 0, 0);} 
-   }
+  @media screen and (max-width: 767px) {
+    .corpo {
+      margin: 0;
+      margin-top: 0px;
+      padding: 0;
+      border: 3px solid rgba(255, 255, 255, 0);
+      font-size: 30px;
+      border-radius: 10px;
+      animation: colorChangereverse 0s linear infinite reverse;
+      font-size: 40px;
+      text-wrap: wrap;
+      width: 100%;
+      height: 100%;
 
 
-   @keyframes colorChangereverse {
-     0% { background-color: rgb(255, 0, 0); } /* Vermelho */
-     30%{ background-color: rgb(162, 0, 255);}
-     50% { background-color: rgb(0, 255, 0);} /* Verde */
-     100% { background-color: rgb(0, 0, 255);} /* Azul */
-     70% {  background-color: rgb(218, 255, 8);} 
-
-
-           
-     0% {
-      transform: translatey(0);
     }
-    0% {
-       transform: translatey(650%);
-     }
 
-   
-     
-   }
+    body {
+      backface-visibility: visible;
+      background-image: none;
+      justify-content: center;
+      justify-items: center;
+      animation: colorChange 0s linear infinite;
+      overflow: scroll;
+    }
+
+    .data {
+      text-wrap: wrap;
+      text-shadow: 0px 100px 10px white;
+      background-color: rgba(165, 42, 42, 0);
+      margin-top: 200px;
+      padding: 5px;
+
+    }
+
+    @keyframes colorChange {
+      10% {
+        background-color: rgb(71, 71, 71);
+      }
+
+      /* Vermelho */
+      10% {
+        background-color: rgb(53, 52, 52);
+      }
+
+      /* Vermelho */
+      30% {
+        background-color: rgb(22, 22, 22);
+      }
+
+      50% {
+        background-color: rgb(31, 32, 31);
+      }
+
+      /* Verde */
+      90% {
+        background-color: rgb(83, 83, 85);
+      }
+
+      /* Azul */
+      70% {
+        background-color: rgb(25, 27, 13);
+      }
+
+      100% {
+        background-color: rgb(0, 0, 0);
+      }
+    }
+
+
+    @keyframes colorChangereverse {
+      0% {
+        background-color: rgb(255, 0, 0);
+      }
+
+      /* Vermelho */
+      30% {
+        background-color: rgb(162, 0, 255);
+      }
+
+      50% {
+        background-color: rgb(0, 255, 0);
+      }
+
+      /* Verde */
+      100% {
+        background-color: rgb(0, 0, 255);
+      }
+
+      /* Azul */
+      70% {
+        background-color: rgb(218, 255, 8);
+      }
 
 
 
-  
+      0% {
+        transform: translatey(0);
+      }
+
+      0% {
+        transform: translatey(650%);
+      }
+
+
+
+    }
 
 
 
@@ -277,13 +413,17 @@ body{
 
 
 
-}
+
+
+
+
+  }
 
 
 
 
 
- /*  @media screen and (min-height: 767px) and (
+  /*  @media screen and (min-height: 767px) and (
      min-height: 450px) {
      
      }
@@ -316,4 +456,4 @@ body{
       }
 */
 
-    }
+}
