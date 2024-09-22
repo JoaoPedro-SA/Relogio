@@ -8,8 +8,52 @@ body {
   background-position: center;
   /*background-repeat: no-repeat;*/
   overflow: hidden;
+  overflow-y: auto;
   margin: 0%;
   padding: 0%;
+  height: 100%;
+
+}
+
+.menu_button {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-bottom: 3%;
+
+}
+
+.menu2_sub {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+
+}
+
+
+button {
+  background-color: #1100ff;
+  border: none;
+  border-radius: 10px;
+  color: white;
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: transform 0.2s;
+
+}
+
+button:hover {
+  background-color: #ff6347;
+  color: white;
+}
+
+.flex_cor {
+  display: flex;
+  gap: 20px;
 
 
 }
@@ -34,12 +78,12 @@ body {
   width: 100%;
   color: white;
   height: 100px;
-  background-color: rgba(0, 0, 255, 0);
   margin-top: 0%;
-  position: fixed;
+
   top: -16px;
   padding-top: 50px;
   justify-content: center;
+  background-color: rgba(0, 255, 255, 0);
 }
 
 .arrumar {
@@ -50,7 +94,7 @@ body {
 
 
 .corpo {
-  background-color: rgba(0, 0, 0, 0);
+  background-color: rgb(0, 0, 0);
   padding: 0px;
   margin: 0px 0px 0px 0px;
   border: 0px solid rgb(0, 0, 0);
@@ -64,6 +108,9 @@ body {
   padding-bottom: 0;
   height: 100vh;
   width: 100vw;
+  align-items: center;
+  display: flex;
+  justify-content: center;
 
 
 
@@ -76,115 +123,149 @@ body {
 
 .data {
   text-wrap: nowrap;
-  padding-top: 20%;
+  border-top: 3px solid;
+  padding-top: 0%;
   text-shadow: 0px 60px 10px white;
-  animation: colorChangeB 0s infinite;
+  animation: colorChangeB1 5s infinite;
+  position: relative;
+  top: -2em;
 }
 
 
-@keyframes colorChange {
-  0% {
-    background-color: rgb(255, 0, 0);
-  }
-
-  /* Vermelho */
-  30% {
-    background-color: rgb(162, 0, 255);
-  }
-
-  50% {
-    background-color: rgb(0, 255, 0);
-  }
-
-  /* Verde */
-  100% {
-    background-color: rgb(0, 0, 255);
-  }
-
-  /* Azul */
-  70% {
-    background-color: rgb(218, 255, 8);
-  }
-}
-
-@keyframes colorChangeB {
-
-  10% {
-    text-shadow: 0px 60px 10px rgb(255, 8, 0)
-  }
-
-  20% {
-    color: rgb(255, 0, 0)
-  }
-
-  30% {
-    text-shadow: 0px 60px 10px rgb(0, 255, 55)
-  }
-
-  40% {
-    color: rgb(0, 255, 85)
-  }
-
-  50% {
-    text-shadow: 0px 60px 10px rgb(0, 26, 255)
-  }
-
-  60% {
-    color: rgb(0, 38, 255)
-  }
-
-  70% {
-    text-shadow: 0px 60px 10px rgb(238, 255, 0)
-  }
-
-  80% {
-    color: rgb(255, 251, 0)
-  }
-
-  90% {
-    text-shadow: 0px 60px 10px rgb(255, 153, 0)
-  }
-
-  1000% {
-    color: rgb(255, 94, 0)
-  }
-
-  /*
-     
-      0% {
-    transform: translateX(0);
-  }
-  20% {
-     transform: translatey(-100%);
-   }
-  40% {
-     transform: translateX(-60%);
-   }
-   60% {
-     transform: translatey(117%);
-   }
-  80% {
-    transform: translateX(0%);/*
-    Opcional: adicione propriedades de opacidade para efeito de "desaparecimento"  
-*/
 
 
-
-
-}
 
 #relogio {
   position: relative;
-  left: 240px;
-  top: 30px;
+  left: 0px;
+  align-items: center;
+  background-color: rgba(255, 0, 0, 0);
+  height: fit-content;
+  width: fit-content;
+  padding: 80px;
+  padding-top: 200px;
+  padding-bottom: 200px;
+  border-radius: 100rem;
+
+  animation: colorChangeB2 10s infinite;
 
 }
 
-#temporizador {
+.temporizador {
   position: relative;
-  left: 240px;
-  top: 30px;
-  color: red;
+  left: 0px;
+  align-items: center;
+  border: 1px solid red;
+  background-color: rgba(255, 0, 0, 0);
+  height: fit-content;
+  width: fit-content;
+  padding: 80px;
+  padding-top: 200px;
+  padding-bottom: 200px;
+  border-radius: 1000px;
+  animation: colorChangeB2 10s infinite;
+
+  /* 
+  animation: colorChangeB2 10s infinite; */
+}
+
+
+
+@keyframes colorChangeB2 {
+  0% {
+    border: 2px solid white;
+  }
+
+  10% {
+    border: 2px solid rgb(255, 0, 0);
+  }
+
+  20% {
+    border: 2px solid rgb(255, 187, 0);
+  }
+
+  30% {
+    border: 2px solid rgb(255, 251, 0);
+  }
+
+  40% {
+    border: 2px solid rgb(166, 255, 0);
+  }
+
+  50% {
+    border: 2px solid rgb(21, 255, 0);
+  }
+
+  60% {
+    border: 2px solid rgb(0, 247, 255);
+  }
+
+  70% {
+    border: 2px solid rgb(0, 26, 255);
+  }
+
+  80% {
+    border: 2px solid rgb(204, 0, 255);
+  }
+
+  90% {
+    border: 2px solid rgb(255, 0, 170);
+  }
+
+  100% {
+    border: 2px solid rgb(0, 0, 0);
+  }
+
+
+}
+
+
+@keyframes colorChangeB1 {
+  0% {
+    border-top: 2px solid white;
+  }
+
+  10% {
+    border-top: 2px solid rgb(255, 0, 0);
+  }
+
+  20% {
+    border-top: 2px solid rgb(255, 187, 0);
+  }
+
+  30% {
+    border-top: 2px solid rgb(255, 251, 0);
+  }
+
+  40% {
+    border-top: 2px solid rgb(166, 255, 0);
+  }
+
+  50% {
+    border-top: 2px solid rgb(21, 255, 0);
+  }
+
+  60% {
+    border-top: 2px solid rgb(0, 247, 255);
+  }
+
+  70% {
+    border-top: 2px solid rgb(0, 26, 255);
+  }
+
+  80% {
+    border-top: 2px solid rgb(204, 0, 255);
+  }
+
+  90% {
+    border-top: 2px solid rgb(255, 0, 170);
+  }
+
+  100% {
+    border-top: 2px solid rgb(0, 0, 0);
+  }
+
+
 }
 
 
@@ -192,107 +273,46 @@ body {
 
 
 @media screen and (max-width: 1400px) {
-  .corpo {
-    display: flex;
-    margin: 200px 300px;
-    margin-left: 500;
-    font-size: 60px;
-    position: absolute;
-    right: 0px;
-    left: 0px;
-    background-size: cover;
-    background-repeat: repeat;
-    height: 0vh;
-    width: 0vw;
-
+  body {
+    overflow-y: auto;
   }
+
+  .corpo {
+    overflow-y: auto;
+  }
+
+
+
+
 
   .data {
     text-shadow: 0px 50px 10px white;
+    border-top: 3px solid white;
+    animation: colorChangeB 5s infinite;
+    text-wrap: wrap;
+    font-size: 70%;
+    text-align: center;
   }
 
 
+  #relogio {
+    margin-top: 10%;
+    font-size: 60%;
+    padding-top: 150px;
+    padding-bottom: 150px;
 
-
-
-  @keyframes colorChangeB {
-
-    0% {
-      border: 100px solid rgb(255, 0, 0);
-    }
-
-    /* Vermelho */
-    30% {
-      border: 50px solid rgb(162, 0, 255);
-    }
-
-    50% {
-      border: 20px solid rgb(0, 255, 0);
-    }
-
-    /* Verde */
-    70% {
-      border: 1px solid rgb(0, 0, 255);
-    }
-
-    /* Azul */
-    100% {
-      border: 100px solid rgb(218, 255, 8);
-    }
-
-    70% {
-      border: 1px solid rgb(255, 153, 0);
-    }
-
-    /* Azul */
-    50% {
-      border: 20px solid rgb(0, 0, 0);
-    }
-
-    /* Verde */
-    30% {
-      border: 50px solid rgb(162, 0, 255);
-    }
-
-    /*     0% {
-     transform: translateX(0);
-   }
-   20% {
-      transform: translatey(-100%);
-    }
-   40% {
-      transform: translateX(-50%);
-    }
-    60% {
-      transform: translatey(117%);
-    }
-   80% {
-     transform: translateX(40%);
-     /* Opcional: adicione propriedades de opacidade para efeito de "desaparecimento" 
-     opacity: 100;
-    }
-    100% {
-      transform: translateX(0);
-    }
-    */
   }
 
+  .temporizador {
+    margin-top: 10%;
+    font-size: 60%;
+    padding-top: 150px;
+    padding-bottom: 150px;
+  }
 
+}
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+/* 
 
   @media screen and (max-width: 767px) {
     .corpo {
@@ -329,131 +349,5 @@ body {
 
     }
 
-    @keyframes colorChange {
-      10% {
-        background-color: rgb(71, 71, 71);
-      }
 
-      /* Vermelho */
-      10% {
-        background-color: rgb(53, 52, 52);
-      }
-
-      /* Vermelho */
-      30% {
-        background-color: rgb(22, 22, 22);
-      }
-
-      50% {
-        background-color: rgb(31, 32, 31);
-      }
-
-      /* Verde */
-      90% {
-        background-color: rgb(83, 83, 85);
-      }
-
-      /* Azul */
-      70% {
-        background-color: rgb(25, 27, 13);
-      }
-
-      100% {
-        background-color: rgb(0, 0, 0);
-      }
-    }
-
-
-    @keyframes colorChangereverse {
-      0% {
-        background-color: rgb(255, 0, 0);
-      }
-
-      /* Vermelho */
-      30% {
-        background-color: rgb(162, 0, 255);
-      }
-
-      50% {
-        background-color: rgb(0, 255, 0);
-      }
-
-      /* Verde */
-      100% {
-        background-color: rgb(0, 0, 255);
-      }
-
-      /* Azul */
-      70% {
-        background-color: rgb(218, 255, 8);
-      }
-
-
-
-      0% {
-        transform: translatey(0);
-      }
-
-      0% {
-        transform: translatey(650%);
-      }
-
-
-
-    }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-  }
-
-
-
-
-
-  /*  @media screen and (min-height: 767px) and (
-     min-height: 450px) {
-     
-     }
-     
-     
-        }
-
-        
-          @keyframes bater {
-          0% {
-            transform: translateX(0);
-          }
-          25% {
-            transform: translateX(100%);
-          }
-          50% {
-            transform: translateX(100%);
-          }
-          75% {
-            transform: translateX(0);
-          }
-          100% {
-          transform: translateX(100%);
-          }
-        }
-        
-        .objeto.animando {
-          animation: bater 2s linear infinite;
-        }
-      }
-*/
-
-}
+} */

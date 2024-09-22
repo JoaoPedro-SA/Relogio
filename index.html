@@ -19,30 +19,32 @@
 
      <nav class="nav">
           <div>
-               <div class="arrumar"> <input class="cor" type="color">
-                    <p lass="letra"> mudar a cor de fundo </P> <br> <br>
+               <div class="flex_cor">
+                    <div class="arrumar"> <input class="cor" type="color">
+                         <p lass="letra"> mudar a cor de fundo </P>
+                    </div>
+                    <div class="arrumar"> <input class="corL" type="color">
+                         <p class="letra"> mudar a cor da letra </P>
+                    </div>
                </div>
-               <div class="arrumar"> <input class="corL" type="color">
-                    <p class="letra"> mudar a cor da letra </P> <br> <br>
-               </div>
-               <div><button class="button">alterar cor</button>
+               <div class="menu_button"><button class="button">alterar cor</button>
                     <button type="button" class="button2"> Modo Relogio</button>
                     <button class="button3"> Modo cronometro </button>
                     <button class="button4"> Modo temporizador </button>
 
                </div>
                <div style="display: none" class='buttons_cronometro'>
-                    <p>
+                    <p class="menu2_sub">
                          <button id="iniciar">iniciar</button>
                          <button id="pausar">pausar</button>
                          <button id="zerar">zerar</button>
                     </p>
                </div>
                <div style="display: none" class='buttons_temporizador'>
-                    <p>
+                    <p class="menu2_sub">
                          <button id="iniciar_temporizador">iniciar</button>
                          <button id="pausar_temporizador">pausar</button>
-                         <button id="definir_temporizador" class="btn btn-primary" data-bs-toggle="modal"
+                         <button id="definir_temporizador" data-bs-toggle="modal"
                               data-bs-target="#staticBackdrop">definir tempo</button>
                          <button style="display: none;" id='alarme' type="button"> desligar alarme</button>
                          <audio class="audio"
@@ -58,6 +60,7 @@
 
           <div class="data" id="data_cor"></div>
           <div style="display: none;" id="relogio">00:00:00</div>
+          <div style="display: none;" class="temporizador">00:00:00</div>
 
 
 

@@ -41,20 +41,24 @@ let s = 0;
 
 const button = document.querySelector('.button');
 const bord = document.querySelector('.body');
+const corp = document.querySelector('.corpo');
 const cor = document.querySelector('.cor');
 const corL = document.querySelector('.corL');
 let data_cor = document.getElementById('data_cor');
+
+
+corL.value = '#ffffff';
 
 
 console.log(cor.value);
 button.addEventListener('click', () => {
   console.log(cor.value);
   bord.style.backgroundColor = cor.value;
+  corp.style.backgroundColor = cor.value;
   data_cor.style.color = corL.value;
   relogio.style.color = corL.value;
   data_cor.style.textShadow = `0px 60px 10px ${corL.value}`;
 })
-
 
 
 
@@ -65,6 +69,7 @@ const modo_temporizador = document.querySelector('.buttons_temporizador');
 
 function modelo_relogio() {
 
+
   const button2 = document.querySelector('.button2');
 
   button2.addEventListener('click', () => {
@@ -72,6 +77,8 @@ function modelo_relogio() {
     modo_cronometro.style.display = 'none';
     result.style.display = '';
     relogio.style.display = 'none';
+    temporizador_relogio.style.display = 'none';
+
   })
 
 }
@@ -90,6 +97,7 @@ function modelo_cronometro() {
     modo_cronometro.style.display = '';
     result.style.display = 'none';
     relogio.style.display = '';
+    temporizador_relogio.style.display = 'none';
     h = 0;
     m = 0;
     s = 0;
@@ -101,6 +109,8 @@ function modelo_cronometro() {
 
 modelo_cronometro();
 
+let temporizador_relogio = document.querySelector('.temporizador');
+
 
 
 function modelo_temporizador() {
@@ -109,11 +119,13 @@ function modelo_temporizador() {
     modo_temporizador.style.display = '';
     modo_cronometro.style.display = 'none';
     result.style.display = 'none';
-    relogio.style.display = '';
-    h = 1;
-    m = 1;
-    s = 1;
-    relogio.textContent = `${String(h).padStart(2, '0')}:${String(m).padStart(2, '0')}:${String(s).padStart(2, '0')}`;
+    relogio.style.display = 'none';
+    temporizador_relogio.style.display = '';
+
+    h = 0;
+    m = 0;
+    s = 30;
+    temporizador_relogio.textContent = `${String(h).padStart(2, '0')}:${String(m).padStart(2, '0')}:${String(s).padStart(2, '0')}`;
 
 
   })
