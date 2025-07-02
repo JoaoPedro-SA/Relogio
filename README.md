@@ -1,6 +1,6 @@
 # Relógio
 
-  Este projeto visa recriar um relógio digital completo, similar ao aplicativo de relógio nativo do Microsoft 365. Utilizando JavaScript, HTML e CSS, foram implementadas as seguintes funcionalidades:
+  Este projeto visa recriar um relógio digital. Utilizando JavaScript, HTML e CSS, foram implementadas as seguintes funcionalidades:
 
   ## Exibição 
   precisa: Horas, minutos e segundos são atualizados em tempo real com alta precisão.
